@@ -1,8 +1,8 @@
-##Express Demo 说明
+##Express Demo 说明 node version v0.12.4
 
 服务端使用技术：Node.js + Express + Mongodb + Mongoose
 
-前段使用技术：自由虚啊这
+前段使用技术：自由选择
 
 ## 开发环境安装步骤
 
