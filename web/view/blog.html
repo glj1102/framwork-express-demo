@@ -1,0 +1,27 @@
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#button").click(function(){
+            var name = $("#blog_name").val();
+            var content = $("#blog_content").val();
+            $.post("/blog/add", {name: name, content: content}, function(result){
+                window.location.reload();
+            });
+        });
+    });
+</script>
+
+<table>
+    <tr>
+        <td>标题</td>
+    </tr>
+    <tr>
+        <input id="blog_name" type="text" name="name"/>
+        <input id="blog_content" type="text" name="content"/>
+        <input id="button" type="button" value="button"/>
+    </tr>
+    <%data.forEach(function(item){%>
+    <tr>
+        <td><%=item.name%></td>
+    </tr>
+    <%})%>
+</table>
