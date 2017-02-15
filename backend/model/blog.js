@@ -14,8 +14,8 @@ var Blog = new Schema({
     name           : { type: String},
     content        : { type: String, default: ''},
     comments       : [Comment],
-    create_date    : { type: Number, default: Date.now},
-    update_date    : { type: Number, default: Date.now},
+    create_date    : { type: Number, default: Math.round(Date.now() / 1000)},
+    update_date    : { type: Number, default: Math.round(Date.now() / 1000)},
     is_deleted     : { type: Number, default: 0}
 });
 
